@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="576" pageHeight="432" orientation="Landscape" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be9a86f7-f376-470a-8552-a404419904fc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from jenis_kendaraan]]>
+	</queryString>
+	<field name="kd_kendaraan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_kendaraan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tarif" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="22" width="321" height="34" uuid="24736454-a0dd-4bfe-a16b-a3b7e401b2a4"/>
+				<textElement>
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN JENIS KENDARAAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="43" width="289" height="23" uuid="bd438d87-4e30-42c2-a165-71b1b4fdfdc8"/>
+				<textElement>
+					<font fontName="Rockwell" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARKIR 100% AMAN NYAMAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="116" y="0" width="109" height="20" uuid="bca144ca-0b83-4e72-84ce-0224d3656849"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Kendaraan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="0" width="125" height="20" uuid="6fa11c98-9eb1-4a9a-b72b-11d44afaac1f"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Kendaraan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="104" height="20" uuid="0a2a9c36-d1f7-4313-b356-ed0d20413d8b"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarif Kendaraan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="31" height="20" uuid="87aa3fe6-0941-46a3-9112-18af57ec8ead"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="116" y="0" width="109" height="20" uuid="42f50d30-62ea-46a3-846a-0867d4707c2a"/>
+				<textElement>
+					<font fontName="Rockwell" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kd_kendaraan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="0" width="125" height="20" uuid="00020bc0-c308-4f43-b690-ae07c31ad8a0"/>
+				<textElement>
+					<font fontName="Rockwell" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_kendaraan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="100" height="20" uuid="766dbf27-b4cc-4e6d-b22c-5b620f980eac"/>
+				<textElement>
+					<font fontName="Rockwell" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="0" width="31" height="20" uuid="f16c7057-4dc2-4e1e-8bdc-b75e57e3586d"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="396" y="5" width="38" height="20" uuid="0e82b5c6-5512-464a-b2b7-4a1983085de7"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

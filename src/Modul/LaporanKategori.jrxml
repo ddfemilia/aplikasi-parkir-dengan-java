@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="576" pageHeight="432" orientation="Landscape" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16e5e671-3ab3-45de-8f25-d271cf38ee27">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     kategori.`kd_kategori` AS kategori_kd_kategori,
+     kategori.`nm_kategori` AS kategori_nm_kategori
+FROM
+     `kategori` kategori]]>
+	</queryString>
+	<field name="kategori_kd_kategori" class="java.lang.String"/>
+	<field name="kategori_nm_kategori" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="126" y="55" width="289" height="23" uuid="090721e9-952d-43df-ba61-b3ddfeb44070"/>
+				<textElement>
+					<font fontName="Rockwell" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARKIR 100% AMAN NYAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="31" width="319" height="24" uuid="b69be045-8096-421e-904e-b9668d2943b9"/>
+				<textElement>
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN JENIS KENDARAAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="0" width="161" height="20" uuid="eac8853b-8813-48a7-bed9-1174def0066e"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="0" width="98" height="20" uuid="27561696-2266-4a35-842d-7e534146fd7e"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="0" width="188" height="20" uuid="5e76f025-9cc7-4d0e-8759-ebbc1580d93e"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Kategori]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="170" y="0" width="161" height="20" uuid="0742409c-321e-4079-9888-c8cbbb82d009"/>
+				<textFieldExpression><![CDATA[$F{kategori_kd_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="0" width="98" height="20" uuid="3c2ac3de-6372-470c-9316-5e3f84e64139"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="0" width="188" height="20" uuid="010c6050-41a2-42c0-afb0-44d628d060f6"/>
+				<textFieldExpression><![CDATA[$F{kategori_nm_kategori}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="415" y="25" width="38" height="20" uuid="df57f79a-f7b6-4a77-b7fc-7b504af74c79"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
